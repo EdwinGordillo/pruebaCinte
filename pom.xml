@@ -10,9 +10,6 @@
 
     <modules>
         <module>auth-service</module>
-        <module>category-service</module>
-        <module>movement-service</module>
-        <module>product-service</module>
     </modules>
 
     <properties>
@@ -21,6 +18,8 @@
         <quarkus.platform.version>3.2.8.Final</quarkus.platform.version>
         <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
     <dependencyManagement>

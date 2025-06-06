@@ -2,6 +2,8 @@ package org.inventario.auth.service.impl;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
+
 import org.inventario.auth.dto.UsuarioResponse;
 import org.inventario.auth.entity.Usuario;
 import org.inventario.auth.repository.UsuarioRepository;
@@ -26,12 +28,15 @@ public class AuthServiceImpl implements AuthService {
                 .orElse(false);
     }
 
+    @Transactional
     @Override
     public Usuario registrar(Usuario usuario) {
         String hash = BCrypt.hashpw(usuario.getPasswordHash(), BCrypt.gensalt());
         usuario.setPasswordHash(hash);
         usuario.setCreatedAt(new Date());
-        return usuarioRepository.persistAndFlush(usuario);
+        
+        usuarioRepository.persistAndFlush(usuario);
+        return usuario;
     }
 
     @Override
