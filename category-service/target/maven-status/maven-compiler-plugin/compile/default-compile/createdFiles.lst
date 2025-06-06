@@ -1,0 +1,8 @@
+org\inventario\service\CategoriaService.class
+org\inventario\service\impl\CategoriaServiceImpl.class
+org\inventario\repository\CategoriaRepository.class
+META-INF\panache-archive.marker
+org\inventario\dto\CategoriaResponse.class
+org\inventario\dto\CategoriaRequest.class
+org\inventario\controller\CategoriaController.class
+org\inventario\entity\Categoria.class

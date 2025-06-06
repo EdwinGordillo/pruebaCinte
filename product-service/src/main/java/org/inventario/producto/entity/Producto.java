@@ -1,7 +1,8 @@
-package org.inventario.entity;
+package org.inventario.producto.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.inventario.producto.entity.Categoria;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package org.inventario.service.impl;
+package org.inventario.movimiento.service.impl;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;

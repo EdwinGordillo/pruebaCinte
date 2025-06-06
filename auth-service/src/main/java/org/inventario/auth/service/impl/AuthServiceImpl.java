@@ -4,7 +4,6 @@ import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 
-import org.inventario.auth.dto.UsuarioResponse;
 import org.inventario.auth.entity.Usuario;
 import org.inventario.auth.repository.UsuarioRepository;
 import org.inventario.auth.service.AuthService;

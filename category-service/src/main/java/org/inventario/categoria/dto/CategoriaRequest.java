@@ -1,4 +1,4 @@
-package org.inventario.dto;
+package org.inventario.categoria.dto;
 
 import lombok.*;
 
@@ -8,4 +8,4 @@ import lombok.*;
 @AllArgsConstructor
 public class CategoriaRequest {
     private String nombre;
-}2
+}

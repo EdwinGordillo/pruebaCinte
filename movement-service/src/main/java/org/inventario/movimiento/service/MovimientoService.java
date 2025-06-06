@@ -1,4 +1,4 @@
-package org.inventario.service;
+package org.inventario.movimiento.service;
 
 import org.inventario.entity.Movimiento;
 

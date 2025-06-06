@@ -1,6 +1,7 @@
 org\inventario\auth\dto\LoginRequest.class
 org\inventario\auth\service\AuthService.class
 org\inventario\auth\util\JwtUtil.class
+org\inventario\auth\dto\UsuarioRequest.class
 org\inventario\auth\repository\UsuarioRepository.class
 org\inventario\auth\controller\AuthController.class
 org\inventario\auth\dto\UsuarioResponse.class

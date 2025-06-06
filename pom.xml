@@ -13,6 +13,7 @@
         <module>category-service</module>
         <module>movement-service</module>
         <module>product-service</module>
+        <module>gateway-service</module>
     </modules>
 
     <properties>

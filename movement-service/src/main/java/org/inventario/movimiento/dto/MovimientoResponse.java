@@ -1,4 +1,4 @@
-package org.inventario.dto;
+package org.inventario.movimiento.dto;
 
 import lombok.*;
 import org.inventario.entity.Movimiento;

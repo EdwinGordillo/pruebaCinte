@@ -1,4 +1,4 @@
-package org.inventario.controller;
+package org.inventario.categoria.controller;
 
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.inject.Inject;

@@ -4,6 +4,7 @@ C:\Users\Brown\Desktop\Cinte\pruebaCinte\auth-service\src\main\java\org\inventar
 C:\Users\Brown\Desktop\Cinte\pruebaCinte\auth-service\src\main\java\org\inventario\auth\service\AuthService.java
 C:\Users\Brown\Desktop\Cinte\pruebaCinte\auth-service\src\main\java\org\inventario\auth\repository\UsuarioRepository.java
 C:\Users\Brown\Desktop\Cinte\pruebaCinte\auth-service\src\main\java\org\inventario\auth\entity\Usuario.java
+C:\Users\Brown\Desktop\Cinte\pruebaCinte\auth-service\src\main\java\org\inventario\auth\dto\UsuarioRequest.java
 C:\Users\Brown\Desktop\Cinte\pruebaCinte\auth-service\src\main\java\org\inventario\auth\dto\LoginRequest.java
 C:\Users\Brown\Desktop\Cinte\pruebaCinte\auth-service\src\main\java\org\inventario\auth\dto\LoginResponse.java
 C:\Users\Brown\Desktop\Cinte\pruebaCinte\auth-service\src\main\java\org\inventario\auth\service\impl\AuthServiceImpl.java
