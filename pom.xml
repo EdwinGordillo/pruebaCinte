@@ -10,6 +10,9 @@
 
     <modules>
         <module>auth-service</module>
+        <module>category-service</module>
+        <module>movement-service</module>
+        <module>product-service</module>
     </modules>
 
     <properties>
