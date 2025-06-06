@@ -2,7 +2,7 @@ package org.inventario.producto.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.inventario.producto.entity.Categoria;
+import org.inventario.categoria.entity.Categoria;
 
 import java.util.Date;
 

@@ -2,9 +2,9 @@ package org.inventario.producto.service.impl;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
-import org.inventario.producto.entity.Categoria;
+import org.inventario.categoria.entity.Categoria;
 import org.inventario.producto.entity.Producto;
-import org.inventario.producto.repository.CategoriaRepository;
+import org.inventario.categoria.repository.CategoriaRepository;
 import org.inventario.producto.repository.ProductoRepository;
 import org.inventario.producto.service.ProductoService;
 

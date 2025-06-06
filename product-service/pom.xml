@@ -41,6 +41,17 @@
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-security</artifactId>
         </dependency>
+        
+         <dependency>
+            <groupId>org.inventario</groupId>
+            <artifactId>auth-service</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.inventario</groupId>
+            <artifactId>category-service</artifactId>
+            <version>${project.version}</version>
+        </dependency>
 
         <!-- JWT -->
         <dependency>

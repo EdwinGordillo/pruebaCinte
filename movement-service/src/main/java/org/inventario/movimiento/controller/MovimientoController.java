@@ -10,8 +10,8 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import org.inventario.movimiento.dto.MovimientoRequest;
 import org.inventario.movimiento.dto.MovimientoResponse;
 import org.inventario.movimiento.entity.Movimiento;
-import org.inventario.movimiento.entity.Producto;
-import org.inventario.movimiento.entity.Usuario;
+import org.inventario.producto.entity.Producto;
+import org.inventario.auth.entity.Usuario;
 import org.inventario.movimiento.service.MovimientoService;
 
 import java.util.List;

@@ -155,6 +155,9 @@ org.hibernate.orm:hibernate-core::jar:6.2.13.Final
 org.hibernate.orm:hibernate-graalvm::jar:6.2.13.Final
 org.hibernate.validator:hibernate-validator::jar:8.0.1.Final
 org.hibernate:quarkus-local-cache::jar:0.2.1
+org.inventario:auth-service::jar:1.0.0
+org.inventario:category-service::jar:1.0.0
+org.inventario:product-service::jar:1.0.0
 org.jboss.invocation:jboss-invocation::jar:2.0.0.Final
 org.jboss.logging:commons-logging-jboss-logging::jar:1.0.0.Final
 org.jboss.logging:jboss-logging-annotations::jar:2.2.1.Final

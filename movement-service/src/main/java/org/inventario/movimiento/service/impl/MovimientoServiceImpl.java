@@ -3,11 +3,11 @@ package org.inventario.movimiento.service.impl;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import org.inventario.movimiento.entity.Movimiento;
-import org.inventario.movimiento.entity.Producto;
-import org.inventario.movimiento.entity.Usuario;
+import org.inventario.producto.entity.Producto;
+import org.inventario.auth.entity.Usuario;
 import org.inventario.movimiento.repository.MovimientoRepository;
-import org.inventario.movimiento.repository.ProductoRepository;
-import org.inventario.movimiento.repository.UsuarioRepository;
+import org.inventario.producto.repository.ProductoRepository;
+import org.inventario.auth.repository.UsuarioRepository;
 import org.inventario.movimiento.service.MovimientoService;
 
 import java.util.Date;

@@ -9,7 +9,7 @@ import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import org.inventario.producto.dto.ProductoRequest;
 import org.inventario.producto.dto.ProductoResponse;
-import org.inventario.producto.entity.Categoria;
+import org.inventario.categoria.entity.Categoria;
 import org.inventario.producto.entity.Producto;
 import org.inventario.producto.service.ProductoService;
 

@@ -1,14 +1,9 @@
-org\inventario\movimiento\entity\Movimiento.class
-org\inventario\movimiento\entity\Categoria.class
-org\inventario\movimiento\repository\ProductoRepository.class
-org\inventario\movimiento\service\MovimientoService.class
-org\inventario\movimiento\repository\UsuarioRepository.class
-org\inventario\movimiento\dto\MovimientoRequest.class
 org\inventario\movimiento\controller\MovimientoController.class
 org\inventario\movimiento\dto\MovimientoResponse.class
 org\inventario\movimiento\service\impl\MovimientoServiceImpl.class
-org\inventario\movimiento\entity\Usuario.class
+org\inventario\movimiento\entity\Movimiento.class
 META-INF\panache-archive.marker
 org\inventario\movimiento\repository\MovimientoRepository.class
 org\inventario\movimiento\entity\Movimiento$TipoMovimiento.class
-org\inventario\movimiento\entity\Producto.class
+org\inventario\movimiento\service\MovimientoService.class
+org\inventario\movimiento\dto\MovimientoRequest.class
