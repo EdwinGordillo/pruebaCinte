@@ -1,4 +1,4 @@
-package org.inventario.entity;
+package org.inventario.categoria.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

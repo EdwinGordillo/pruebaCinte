@@ -1,4 +1,4 @@
-package org.inventario.dto;
+package org.inventario.categoria.dto;
 
 import lombok.*;
 import org.inventario.entity.Categoria;

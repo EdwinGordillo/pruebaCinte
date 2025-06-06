@@ -1,4 +1,4 @@
-package org.inventario.dto;
+package org.inventario.producto.dto;
 
 import lombok.*;
 

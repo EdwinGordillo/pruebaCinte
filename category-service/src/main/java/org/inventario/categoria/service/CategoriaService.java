@@ -1,4 +1,4 @@
-package org.inventario.service;
+package org.inventario.categoria.service;
 
 import org.inventario.entity.Categoria;
 
