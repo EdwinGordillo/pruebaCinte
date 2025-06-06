@@ -1,6 +1,11 @@
 quarkus:
   http:
     port: 8081
+    auth:
+      permission:
+        authenticated:
+          paths: /*
+          policy: authenticated
 
   datasource:
     db-kind: oracle

@@ -32,6 +32,25 @@
             <artifactId>quarkus-security</artifactId>
         </dependency>
 
+        <!-- JWT -->
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-smallrye-jwt</artifactId>
+        </dependency>
+
+        <!-- Panache -->
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-hibernate-orm-panache</artifactId>
+        </dependency>
+
+        <!-- Hashing con BCrypt -->
+        <dependency>
+            <groupId>org.mindrot</groupId>
+            <artifactId>jbcrypt</artifactId>
+            <version>0.4</version>
+        </dependency>
+
         <!-- Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -59,3 +78,8 @@
         </dependency>
     </dependencies>
 </project>
+<!--
+    Este archivo pom.xml define las dependencias y configuraciones específicas del servicio de autenticación.
+    Incluye dependencias para Quarkus, JWT, Panache, BCrypt, Lombok, OpenAPI y validación.
+    También incluye dependencias para pruebas unitarias con Mockito.
+-->

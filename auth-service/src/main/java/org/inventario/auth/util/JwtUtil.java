@@ -6,10 +6,11 @@ import java.time.Duration;
 import java.util.Set;
 
 public class JwtUtil {
+
     public static String generarToken(String username) {
         return Jwt.issuer("inventario-auth")
                 .upn(username)
-                .groups(Set.of("user")) // Puedes cambiar a admin, etc.
+                .groups(Set.of("user"))
                 .expiresIn(Duration.ofHours(1))
                 .sign();
     }

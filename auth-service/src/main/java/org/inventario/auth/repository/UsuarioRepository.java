@@ -8,8 +8,7 @@ import java.util.Optional;
 
 @ApplicationScoped
 public class UsuarioRepository implements PanacheRepository<Usuario> {
-
-    public Optional<Usuario> findByUsernameAndPasswordHash(String username, String passwordHash) {
-        return find("username = ?1 and passwordHash = ?2", username, passwordHash).firstResultOptional();
+    public Optional<Usuario> findByUsername(String username) {
+        return find("username", username).firstResultOptional();
     }
 }

@@ -1,9 +1,11 @@
 package org.inventario.auth.service.impl;
 
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+import org.inventario.auth.entity.Usuario;
 import org.inventario.auth.repository.UsuarioRepository;
 import org.inventario.auth.service.AuthService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.mindrot.jbcrypt.BCrypt;
 
 @ApplicationScoped
 public class AuthServiceImpl implements AuthService {
@@ -13,9 +15,8 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public boolean validarUsuario(String username, String password) {
-        return usuarioRepository.find("username", username)
-            .firstResultOptional()
-            .map(user -> BCrypt.checkpw(password, user.getPasswordHash()))
-            .orElse(false);
+        return usuarioRepository.findByUsername(username)
+                .map(user -> BCrypt.checkpw(password, user.getPasswordHash()))
+                .orElse(false);
     }
-}
+}   
