@@ -1,0 +1,41 @@
+CREATE OR REPLACE PACKAGE PKG_MOVIMIENTOS AS
+  PROCEDURE REGISTRAR_ENTRADA(p_id_producto NUMBER, p_cantidad NUMBER);
+  PROCEDURE REGISTRAR_SALIDA(p_id_producto NUMBER, p_cantidad NUMBER);
+  PROCEDURE LISTAR_MOVIMIENTOS(p_result OUT SYS_REFCURSOR);
+END PKG_MOVIMIENTOS;
+/
+
+CREATE OR REPLACE PACKAGE BODY PKG_MOVIMIENTOS AS
+  PROCEDURE REGISTRAR_ENTRADA(p_id_producto NUMBER, p_cantidad NUMBER) IS
+  BEGIN
+    INSERT INTO MOVIMIENTO(TIPO, CANTIDAD, ID_PRODUCTO)
+    VALUES ('ENTRADA', p_cantidad, p_id_producto);
+
+    UPDATE PRODUCTO
+    SET STOCK = STOCK + p_cantidad
+    WHERE ID = p_id_producto;
+  END;
+
+  PROCEDURE REGISTRAR_SALIDA(p_id_producto NUMBER, p_cantidad NUMBER) IS
+    v_stock_actual NUMBER;
+  BEGIN
+    SELECT STOCK INTO v_stock_actual FROM PRODUCTO WHERE ID = p_id_producto;
+
+    IF v_stock_actual < p_cantidad THEN
+      RAISE_APPLICATION_ERROR(-20001, 'Stock insuficiente para salida');
+    END IF;
+
+    INSERT INTO MOVIMIENTO(TIPO, CANTIDAD, ID_PRODUCTO)
+    VALUES ('SALIDA', p_cantidad, p_id_producto);
+
+    UPDATE PRODUCTO
+    SET STOCK = STOCK - p_cantidad
+    WHERE ID = p_id_producto;
+  END;
+
+  PROCEDURE LISTAR_MOVIMIENTOS(p_result OUT SYS_REFCURSOR) IS
+  BEGIN
+    OPEN p_result FOR SELECT * FROM MOVIMIENTO;
+  END;
+END PKG_MOVIMIENTOS;
+/
