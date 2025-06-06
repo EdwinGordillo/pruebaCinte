@@ -8,10 +8,10 @@ import jakarta.ws.rs.core.Response;
 
 import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
-import org.inventario.dto.CategoriaRequest;
-import org.inventario.dto.CategoriaResponse;
-import org.inventario.entity.Categoria;
-import org.inventario.service.CategoriaService;
+import org.inventario.categoria.dto.CategoriaRequest;
+import org.inventario.categoria.dto.CategoriaResponse;
+import org.inventario.categoria.entity.Categoria;
+import org.inventario.categoria.service.CategoriaService;
 
 import java.util.List;
 import java.util.stream.Collectors;

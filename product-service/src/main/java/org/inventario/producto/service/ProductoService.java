@@ -1,6 +1,6 @@
 package org.inventario.producto.service;
 
-import org.inventario.entity.Producto;
+import org.inventario.producto.entity.Producto;
 
 import java.util.List;
 

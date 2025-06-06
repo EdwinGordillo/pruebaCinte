@@ -1,8 +1,8 @@
-org\inventario\service\CategoriaService.class
-org\inventario\service\impl\CategoriaServiceImpl.class
-org\inventario\repository\CategoriaRepository.class
+org\inventario\categoria\controller\CategoriaController.class
 META-INF\panache-archive.marker
-org\inventario\dto\CategoriaResponse.class
-org\inventario\dto\CategoriaRequest.class
-org\inventario\controller\CategoriaController.class
-org\inventario\entity\Categoria.class
+org\inventario\categoria\dto\CategoriaRequest.class
+org\inventario\categoria\entity\Categoria.class
+org\inventario\categoria\dto\CategoriaResponse.class
+org\inventario\categoria\service\impl\CategoriaServiceImpl.class
+org\inventario\categoria\service\CategoriaService.class
+org\inventario\categoria\repository\CategoriaRepository.class

@@ -7,11 +7,11 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
-import org.inventario.dto.ProductoRequest;
-import org.inventario.dto.ProductoResponse;
-import org.inventario.entity.Categoria;
-import org.inventario.entity.Producto;
-import org.inventario.service.ProductoService;
+import org.inventario.producto.dto.ProductoRequest;
+import org.inventario.producto.dto.ProductoResponse;
+import org.inventario.producto.entity.Categoria;
+import org.inventario.producto.entity.Producto;
+import org.inventario.producto.service.ProductoService;
 
 import java.util.List;
 import java.util.stream.Collectors;

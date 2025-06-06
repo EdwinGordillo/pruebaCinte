@@ -1,0 +1,10 @@
+org\inventario\producto\repository\ProductoRepository.class
+org\inventario\producto\repository\CategoriaRepository.class
+org\inventario\producto\entity\Producto.class
+org\inventario\producto\dto\ProductoRequest.class
+org\inventario\producto\controller\ProductoController.class
+org\inventario\producto\dto\ProductoResponse.class
+META-INF\panache-archive.marker
+org\inventario\producto\service\impl\ProductoServiceImpl.class
+org\inventario\producto\service\ProductoService.class
+org\inventario\producto\entity\Categoria.class

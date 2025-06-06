@@ -1,7 +1,7 @@
 package org.inventario.movimiento.dto;
 
 import lombok.*;
-import org.inventario.entity.Movimiento;
+import org.inventario.movimiento.entity.Movimiento;
 
 import java.util.Date;
 

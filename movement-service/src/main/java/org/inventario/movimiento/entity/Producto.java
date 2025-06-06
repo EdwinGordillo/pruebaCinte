@@ -2,6 +2,7 @@ package org.inventario.movimiento.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.inventario.movimiento.entity.Categoria;
 
 import java.util.Date;
 

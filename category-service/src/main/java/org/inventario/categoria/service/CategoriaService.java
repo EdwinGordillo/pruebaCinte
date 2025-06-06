@@ -1,6 +1,6 @@
 package org.inventario.categoria.service;
 
-import org.inventario.entity.Categoria;
+import org.inventario.categoria.entity.Categoria;
 
 import java.util.List;
 

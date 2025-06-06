@@ -1,0 +1,77 @@
+quarkus:
+  http:
+    port: 8081
+    auth:
+      permission:
+        authenticated:
+          paths: /*
+          policy: authenticated
+
+  datasource:
+    db-kind: oracle
+    username: QUARKUS
+    password: Leito9803
+    jdbc:
+      url: jdbc:oracle:thin:@localhost:55089/FREEPDB1
+      driver: oracle.jdbc.OracleDriver
+
+  hibernate-orm:
+    database:
+      generation: update
+    dialect: org.hibernate.dialect.Oracle10gDialect
+    log:
+      sql: true
+
+  devservices:
+    enabled: false
+
+  swagger-ui:
+    always-include: true
+    path: /swagger-ui
+
+  smallrye-openapi:
+    path: /q/openapi
+    info:
+      title: Auth Service API
+      version: "1.0"
+      description: API para producto del sistema de inventario
+
+  smallrye-jwt:
+    sign:
+      key: |-
+        -----BEGIN RSA PRIVATE KEY-----
+        MIICWgIBAAKBgF7cheKNEsxW/OU5FK57XzS8PUlfeUCU1oHcReLQR87Vty+0UQhh
+        N9aF9PVfCf7pJbRhSrcOMUbpZVt2VtaAWSl3rXrQPfBjB+T1XsQ+mtkmSQaHIz/A
+        9VcyeDrVLa5EDzfR2QQHXSSPuxoHJYXLO2WhKXc3+6zyjk4oavXCTqjvAgMBAAEC
+        gYAnafz++pqa6HG/VA4xyPTv1l6og9C/cpgF8N3gtaWAXO/2FDevAaXPrmzvHoPq
+        tDiEUABZOr5itkr0y6CdE0r4HBnGzTccXX70hsCUMdTvFSKpAW5kkfn19Em/4qyg
+        4XxXPlf6VK+0XxC4zp5SyJPDuZGFXcDZznzwv3b/sQSfAQJBAKUGj2aYrQkUcoKz
+        IXBdbXzAgkxWy3CeiUp2cZkneH5veR7WcFDr2T27BqtfIhTgcTZ94rZX04U0FxWu
+        ER7Pyq8CQQCTJ/RkHkz0MleZrQS6CP1iGpgVpmXBykXdoXBeVaMgv+jeE2YvU0s4
+        FGvjY4yBg6jy1A3A7Z3nW1AYjOD0AZXBAkAfwfduwwrpqGmxBU/2E8SyMUnh7wIP
+        ljLNhaWu1420pzcj3BiZOgoAezF5YUFpyxd+aRNsC9LE25Vlsq3QxCQ5AkBC5i0i
+        vuu5MJHGmXPGp4OZ8AEoBofIPA7bHSOan1AT+WsCWstfxHwzuIT70Sv1TUenbWP7
+        S4s3vLmDD7jM9VOBAkArdtEjdTNYtNoxxca+eaUt5Y3uMqmTR1r1HccbqX0T0xJ5
+        SDobupSZLLKpp4TiFNXgv61svjwhnLAZok1dp0E=
+        -----END RSA PRIVATE KEY-----
+      algorithm: RS256
+    new-token:
+      lifespan: 3600
+
+mp:
+  jwt:
+    verify:
+      publickey:
+        key: |-
+          -----BEGIN PUBLIC KEY-----
+          MIGeMA0GCSqGSIb3DQEBAQUAA4GMADCBiAKBgF7cheKNEsxW/OU5FK57XzS8PUlf
+          eUCU1oHcReLQR87Vty+0UQhhN9aF9PVfCf7pJbRhSrcOMUbpZVt2VtaAWSl3rXrQ
+          PfBjB+T1XsQ+mtkmSQaHIz/A9VcyeDrVLa5EDzfR2QQHXSSPuxoHJYXLO2WhKXc3
+          +6zyjk4oavXCTqjvAgMBAAE=
+          -----END PUBLIC KEY-----
+    issuer: inventario-auth
+
+%dev:
+  quarkus:
+    devservices:
+      enabled: false

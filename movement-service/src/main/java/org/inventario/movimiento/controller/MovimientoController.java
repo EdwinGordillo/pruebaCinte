@@ -7,12 +7,12 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
-import org.inventario.dto.MovimientoRequest;
-import org.inventario.dto.MovimientoResponse;
-import org.inventario.entity.Movimiento;
-import org.inventario.entity.Producto;
-import org.inventario.entity.Usuario;
-import org.inventario.service.MovimientoService;
+import org.inventario.movimiento.dto.MovimientoRequest;
+import org.inventario.movimiento.dto.MovimientoResponse;
+import org.inventario.movimiento.entity.Movimiento;
+import org.inventario.movimiento.entity.Producto;
+import org.inventario.movimiento.entity.Usuario;
+import org.inventario.movimiento.service.MovimientoService;
 
 import java.util.List;
 import java.util.stream.Collectors;

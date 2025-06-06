@@ -1,7 +1,7 @@
 package org.inventario.categoria.dto;
 
 import lombok.*;
-import org.inventario.entity.Categoria;
+import org.inventario.categoria.entity.Categoria;
 
 @Getter
 @Setter

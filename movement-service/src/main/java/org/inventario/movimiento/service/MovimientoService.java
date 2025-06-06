@@ -1,6 +1,6 @@
 package org.inventario.movimiento.service;
 
-import org.inventario.entity.Movimiento;
+import org.inventario.movimiento.entity.Movimiento;
 
 import java.util.List;
 
