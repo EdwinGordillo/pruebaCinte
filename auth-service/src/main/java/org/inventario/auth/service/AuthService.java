@@ -9,6 +9,8 @@ public interface AuthService {
 
     Usuario registrar(Usuario usuario);
 
+    boolean usuarioExiste(String username);
+
     List<Usuario> obtenerTodos();
 
     Usuario obtenerPorId(Long id);

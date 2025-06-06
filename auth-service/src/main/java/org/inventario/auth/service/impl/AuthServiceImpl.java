@@ -12,8 +12,6 @@ import org.mindrot.jbcrypt.BCrypt;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 @ApplicationScoped
 public class AuthServiceImpl implements AuthService {
@@ -34,9 +32,14 @@ public class AuthServiceImpl implements AuthService {
         String hash = BCrypt.hashpw(usuario.getPasswordHash(), BCrypt.gensalt());
         usuario.setPasswordHash(hash);
         usuario.setCreatedAt(new Date());
-        
+
         usuarioRepository.persistAndFlush(usuario);
         return usuario;
+    }
+
+    @Override
+    public boolean usuarioExiste(String username) {
+        return usuarioRepository.findByUsername(username).isPresent();
     }
 
     @Override

@@ -10,6 +10,7 @@ import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import org.inventario.auth.dto.LoginRequest;
 import org.inventario.auth.dto.LoginResponse;
+import org.inventario.auth.dto.UsuarioRequest;
 import org.inventario.auth.dto.UsuarioResponse;
 import org.inventario.auth.entity.Usuario;
 import org.inventario.auth.service.AuthService;
@@ -43,8 +44,27 @@ public class AuthController {
     @POST
     @Path("/register")
     @Operation(summary = "Registrar nuevo usuario", description = "Crea un nuevo usuario con contraseña encriptada")
-    public Response registrarUsuario(Usuario usuario) {
+    public Response registrarUsuario(UsuarioRequest data) {
+        String username = data.getUsername();
+        String password = data.getPassword();
+
+        if (username == null || username.isEmpty() || password == null || password.isEmpty()) {
+            return Response.status(Response.Status.BAD_REQUEST)
+                    .entity("Username y password son requeridos").build();
+        }
+
+        // Validar que no exista el username
+        if (authService.usuarioExiste(username)) {
+            return Response.status(Response.Status.CONFLICT)
+                    .entity("El username ya está en uso").build();
+        }
+
+        Usuario usuario = new Usuario();
+        usuario.setUsername(username);
+        usuario.setPasswordHash(password); // sin encriptar aquí
+
         Usuario creado = authService.registrar(usuario);
+
         return Response.status(Response.Status.CREATED).entity(new UsuarioResponse(creado)).build();
     }
 
@@ -58,7 +78,7 @@ public class AuthController {
                 .map(UsuarioResponse::new)
                 .collect(Collectors.toList());
         return Response.ok(responseList).build();
-    }
+    }  
 
     @GET
     @RolesAllowed("user")
